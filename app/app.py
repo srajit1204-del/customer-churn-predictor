@@ -4,9 +4,8 @@ import pandas as pd
 import numpy as np
 import shap
 import matplotlib.pyplot as plt
-
-# ── Load model and explainer ──────────────────────────────
-path = "/Users/ajithsreepuram/Desktop/Customer-Churn predictor/"
+import os
+path = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + "/"
 
 model    = pickle.load(open(path + "models/xgb_model.pkl",      "rb"))
 explainer = pickle.load(open(path + "models/shap_explainer.pkl", "rb"))
